@@ -96,19 +96,111 @@ Answer the following questions based on your understanding of Python programming
      print(fruit)
 ```
 9. Functions in Python:
-   - What are functions in Python, and why are they useful? Write a Python function that takes two arguments and returns their sum. Include an example of how to call this function.
+- What are functions in Python, and why are they useful?
+ - Functions in Python are blocks of reusable code that perform a specific task. Functions allow you to write a block of code once and reuse it multiple times throughout your program, promoting DRY (Don't Repeat Yourself) principles.
+
+- Write a Python function that takes two arguments and returns their sum. Include an example of how to call this function.
+   ```
+    def add_numbers(a, b):
+     return a + b
+    result = add_numbers(3, 5)
+    print(f"The sum of 3 and 5 is: {result}")
+   ```
 
 10. Lists and Dictionaries:
-   - Describe the differences between lists and dictionaries in Python. Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
+- Describe the differences between lists and dictionaries in Python.
+ - **Structure** - Lists are ordered collections of items, whereas dictionaries are unordered collections of key-value pairs.
+ - **Syntax** - Lists are defined using square brackets (`[]`), while dictionaries are defined using curly braces (`{}`) with keys and values separated by colons.
+ - **Indexing** - List elements are accessed by their position (index), whereas dictionary values are accessed using unique keys.
+ - **Order** - Lists maintain the order of elements as they were added, while dictionaries (since Python 3.7) maintain insertion order but were unordered before that.
+ - **Mutability** - Both lists and dictionaries are mutable, meaning their contents can be changed after creation.
+ - **Use Cases** - Lists are typically used for ordered sequences of items, while dictionaries are used for associating unique keys with values.
+ - **Performance** - Accessing elements in a list by index is generally faster than accessing values in a dictionary by key, but dictionary lookups are optimized for key-based access.
+ - **Duplicates** - Lists can contain duplicate values, but dictionary keys must be unique.
 
-11. Exception Handling:
-   - What is exception handling in Python? Provide an example of how to use `try`, `except`, and `finally` blocks to handle errors in a Python script.
+- Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
 
-11. Modules and Packages:
-   - Explain the concepts of modules and packages in Python. How can you import and use a module in your script? Provide an example using the `math` module.
+```
+ numbers = [1, 2, 3, 4, 5]
+ 
+ 
+ my_dict = {
+     'name': 'Alice',
+     'age': 30,
+     'city': 'Seattle'
+ }
+ 
+ print("List of numbers:", numbers)
+ print("Dictionary:", my_dict)
+ 
+ print("First number:", numbers[0])
+ print("Age of the person:", my_dict['age'])
+```
+
+
+12. Exception Handling:
+- What is exception handling in Python?
+ - Exception handling in Python allows you to gracefully handle errors that occur during program execution. When an error occurs, Python raises an exception, which can be caught and handled using try, except, else, and finally blocks.
+  
+- Provide an example of how to use `try`, `except`, and `finally` blocks to handle errors in a Python script.
+  ```
+   try:
+     num = int(input("Enter a number: "))
+     result = 10 / num
+ except ZeroDivisionError:
+     print("Cannot divide by zero.")
+ except ValueError:
+     print("Invalid input. Please enter a valid number.")
+ else:
+     print(f"Result: {result}")
+ finally:
+     print("Execution completed.")
+``` 
+
+13. Modules and Packages:
+- Explain the concepts of modules and packages in Python.
+ - A module in Python is a single file that contains Python code. It can include functions, classes, variables, and executable statements.
+ - A package is a collection of related modules organized in a directory structure.
+
+- How can you import and use a module in your script? Provide an example using the `math` module.
+ ```
+  import math
+ 
+  def square_root(number):
+     """Calculate the square root of a number."""
+     return math.sqrt(number)
+ ```
 
 11. File I/O:
-    - How do you read from and write to files in Python? Write a script that reads the content of a file and prints it to the console, and another script that writes a list of strings to a file.
+- How do you read from and write to files in Python?
+
+ **Reading a file**
+   open('filename', 'r')
+   read(), readline(), readlines()
+   close()
+
+**Writing a file**
+ open('filename', 'w') for writing (overwrites)
+ open('filename', 'a') for appending
+ write(), writelines()
+ close()
+ Or use with open('filename', 'w') as file
+ Or use with open('filename', 'r') as file
+
+- Write a script that reads the content of a file and prints it to the console, and another script that writes a list of strings to a file.
+
+```
+ with open('file'.txt', 'r') as file:
+     content = file.read()
+     print(content)
+```
+```
+ with open('file.txt', 'w') as file:
+     file.write("Hello, World!\n")
+ 
+ with open('file.txt', 'a') as file:
+     file.write("This is an appended line.\n")
+```
 
 # Submission Guidelines:
 - Your answers should be well-structured, concise, and to the point.
