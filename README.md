@@ -202,6 +202,11 @@ Answer the following questions based on your understanding of Python programming
      file.write("This is an appended line.\n")
 ```
 
+**References**
+https://www.python.org/doc/
+https://www.geeksforgeeks.org/python-programming-language-tutorial/
+
+
 # Submission Guidelines:
 - Your answers should be well-structured, concise, and to the point.
 - Provide code snippets or complete scripts where applicable.
